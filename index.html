@@ -115,6 +115,10 @@ button:hover {
     <input type="number" id="totalWeight" step="0.01" required>
     </div>
     <div class="input-pair">
+      <label for="numDoughballs">Number of Doughballs:</label>
+      <input type="number" id="numDoughballs" value="1" min="1" required>
+    </div>
+    <div class="input-pair">
     <label for="hydration">Hydration % (water):</label>
     <input type="number" id="hydration" step="0.01" required>
     </div>
@@ -362,6 +366,9 @@ function editCustomPreset(name) {
       e.preventDefault();
 
       const totalWeight = parseFloat(document.getElementById('totalWeight').value);
+      const numDoughballs = parseInt(document.getElementById('numDoughballs').value);
+      const doughballWeight = totalWeight * numDoughballs;
+    
       const hydration = parseFloat(document.getElementById('hydration').value) / 100;
       const salt = parseFloat(document.getElementById('salt').value) / 100;
       const oil = parseFloat(document.getElementById('oil').value) / 100;
@@ -387,14 +394,14 @@ function editCustomPreset(name) {
       const resultHTML = `
         <h2>Ingredients:</h2>
         <ul>
-          <li>Flour: ${flour.toFixed(1)}g</li>
-          <li>Water: ${water.toFixed(1)}g</li>
-          <li>Salt: ${saltGrams.toFixed(1)}g</li>
-          <li>Yeast: ${yeastGrams.toFixed(1)}g</li>
-          <li>Oil: ${oilGrams.toFixed(1)}g</li>
-          <li>Sugar: ${sugarGrams.toFixed(1)}g</li>
-          <li>Diastatic Malt Powder: ${dsmGrams.toFixed(1)}g</li>
-          <li><strong>Total Dough Weight: ${totalWeight.toFixed(1)}g</strong></li>
+          <li>Flour: ${(flour * numDoughballs).toFixed(1)}g</li>
+          <li>Water: ${(water * numDoughballs).toFixed(1)}g</li>
+          <li>Salt: ${(saltGrams * numDoughballs).toFixed(1)}g</li>
+          <li>Yeast: ${(yeastGrams * numDoughballs).toFixed(1)}g</li>
+          <li>Oil: ${(oilGrams * numDoughballs).toFixed(1)}g</li>
+          <li>Sugar: ${(sugarGrams * numDoughballs).toFixed(1)}g</li>
+          <li>Diastatic Malt Powder: ${(dsmGrams * numDoughballs).toFixed(1)}g</li>
+          <li><strong>Total Dough Weight: ${(totalWeight * numDoughballs).toFixed(1)}g</strong></li>
         </ul>
       `;
 
