@@ -1,0 +1,85 @@
+
+    h1 {
+      font-size: 50px;
+      color:#0d641e;
+      text-align: center;
+    }
+
+    body {
+      font-family: "Tagesschrift", system-ui;
+      font-weight: 200;
+      font-style: normal;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fffcf2;
+      border: 1px solid #61a36a;
+      border-radius: 12px;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    input {
+      display: block;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-family: "Tagesschrift", system-ui;
+      width: 20%
+    }
+    button {
+      margin-top: 1rem;
+      color: white;
+      font-family: "Tagesschrift", system-ui; 
+      padding: 0.5rem 1rem;
+      background-color: #61a36a;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    }
+    #results {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #61a36a;
+      border-left: 5px solid #0d641e;
+      color: white
+    }
+    .presets button {
+      margin-right: 10px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-family: "Tagesschrift", system-ui;
+    }
+
+    #doughForm {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+}
+.input-pair {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+    input:focus {
+  outline: none;
+  border: 1px solid #61a36a;
+  background-color: #eefaf0;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+button:hover {
+  background-color: #4e8556;
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.active-preset {
+  background-color: #0d641e;
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #0d641e;
+}
