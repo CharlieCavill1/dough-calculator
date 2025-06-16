@@ -5,10 +5,10 @@
     const presets = {
       newYork: {
         hydration: 63,
-        salt: 2,
-        oil: 1.5,
+        salt: 2.5,
+        oil: 2.5,
         sugar: 1.5,
-        dsm: 0.5,
+        dsm: 0,
         roomTemp: 21,
         roomFermentation: 12,
         coldTemp: 4,
@@ -16,7 +16,7 @@
       },
       sicilian: {
         hydration: 70,
-        salt: 2,
+        salt: 2.5,
         oil: 3.5,
         sugar: 0,
         dsm: 0,
@@ -28,7 +28,7 @@
       },
       tavern: {
         hydration: 50,
-        salt: 1,
+        salt: 2.5,
         oil: 10,
         sugar: 0,
         dsm: 0,
@@ -39,7 +39,7 @@
       },
       neapolitan: {
         hydration: 62,
-        salt: 2,
+        salt: 3,
         oil: 0,
         sugar: 0,
         dsm: 0,
@@ -47,6 +47,17 @@
         roomFermentation: 24,
         coldTemp: 4,
         coldFermentation: 0,
+    }, 
+    roman: {
+        hydration: 70,
+        salt: 3,
+        oil: 3.5,
+        sugar: 0,
+        dsm: 0,
+        roomTemp: 20,
+        roomFermentation: 4,
+        coldTemp: 4,
+        coldFermentation: 12,
     }, 
   }
 
